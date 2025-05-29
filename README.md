@@ -66,7 +66,6 @@
 
 ```bash
 git clone https://github.com/tejodhay-bonam/Data-Science-AI-Agent
-cd ai-notebook-agent
 ````
 
 ### 2. Create virtual environment
