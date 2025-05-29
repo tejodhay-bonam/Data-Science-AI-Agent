@@ -1,0 +1,34 @@
+Break down the given data science or machine learning task into a minimal, logical sequence of self-contained subtasks. Each subtask should represent a distinct phase or operation in a typical data science workflow (e.g., data loading, initial exploration, preprocessing a specific aspect, model training, evaluation, insight documentation).
+Ensure each subtask is clearly defined so that a language model can generate the complete code or markdown for that specific step without needing excessive context from other subtasks. If the main 'Task' provides specific file paths, dataset descriptions, or target objectives, ensure your subtask descriptions correctly reference or incorporate these details as needed.
+For machine learning tasks involving preprocessing and model training, subtasks should clearly delineate:
+1.  Data loading and initial inspection.
+2.  Separation of features (X) and target (y).
+3.  Splitting data into training and testing sets.
+4.  Definition and fitting of preprocessing steps (e.g., using ColumnTransformer for different data types). Crucially, any fitting of preprocessors (imputers, scalers, encoders) must occur *only* on the training data (X_train).
+5.  Application (transformation) of these fitted preprocessors to both training and testing datasets.
+6.  Training one or more models.
+7.  Evaluating models.
+8.  If requested, creating an inference function using the best model and fitted preprocessor.
+9.  Summarizing findings or insights.
+
+If a function or class needs to be created (e.g., for inference), its definition should be a self-contained subtask.
+Do not write Python code for the subtasks themselves; only provide descriptive titles for each subtask.
+Return your response as a Python list of strings, where each string is a concise but descriptive title for one subtask. Ensure this list is enclosed in a Python code block.
+
+For example, for a generic classification task:
+```python
+[
+    "Subtask 1: Load the dataset specified in the task and display its basic information and first few rows.",
+    "Subtask 2: Perform initial exploratory data analysis (EDA) - check data types, summary statistics, and missing value counts.",
+    "Subtask 3: Visualize feature distributions (e.g., histograms for numerical, bar plots for categorical) and relationships (e.g., scatter plots). Generate a correlation heatmap for numerical features.",
+    "Subtask 4: Separate features and the target variable. Split the data into training and testing sets.",
+    "Subtask 5: Define a preprocessing pipeline (e.g., ColumnTransformer) for numerical (scaling, imputation) and categorical (encoding) features. Fit this pipeline ONLY on the training features.",
+    "Subtask 6: Apply the fitted preprocessing pipeline to transform both training and testing feature sets. Convert transformed arrays back to DataFrames with meaningful column names if possible.",
+    "Subtask 7: Train a Logistic Regression model on the preprocessed training data.",
+    "Subtask 8: Train a Random Forest Classifier model on the preprocessed training data.",
+    "Subtask 9: Evaluate both models on the preprocessed test data using accuracy, precision, recall, and F1-score. Print the classification reports.",
+    "Subtask 10: Compare model performances and identify the best model.",
+    "Subtask 11: Create a production-ready inference function using the selected best model and the fitted preprocessing pipeline."
+]
+
+Task: {{ task }}
