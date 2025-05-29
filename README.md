@@ -43,11 +43,6 @@
 ```
 <br><br>
 > ⚠️ **Note:** The output quality heavily depends on the LLM you are using.  
-> 💡 **Tip:** For the best results, try using the **Gemini 2.5 Pro** model if available.
-
-
-
-> [colab](https://colab.research.google.com/) has this similar feature integrated in gemini chat. I have tried to build something similar from scratch.
 ---
 
 ## 📁 Project Structure
@@ -56,54 +51,8 @@
 - `nb_agent_backend.py`: This file is the backend for our notebook AI agent.
 - `nb_agent_ui.py`: This file is the streamlit UI for our notebook AI agent.
 - `prompts/`: Contains the prompt templates for the AI agents.
-- `tested_notebooks/`: Contains sample notebooks that I have tested, fully created and executed by the AI agent.
-
 ---
 
-## 🚀 Setup
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/tejodhay-bonam/Data-Science-AI-Agent
-````
-
-### 2. Create virtual environment
-```bash
-.venv\Scripts\activate
-source .venv/bin/activate
-````
-
-
-### 3. Install Dependencies
-
-You can install the dependencies using **pip** *or* **uv**:
-
-#### Option A: Using pip
-
-```bash
-pip install -r requirements.txt
-```
-
-#### Option B: Using uv
-
-> [uv](https://github.com/astral-sh/uv) is a fast, modern Python package manager.
-
-```bash
-uv pip install -r requirements.txt
-```
-
-### 4. Run the Streamlit App
-
-```bash
-streamlit run nb_agent_ui.py
-```
-
-Make sure to replace `app.py` with the actual filename of your Streamlit entry point if different.
-
-
-
----
 
 ## 📌 Requirements
 
@@ -111,4 +60,3 @@ Make sure to replace `app.py` with the actual filename of your Streamlit entry p
 * Jupyter
 * Streamlit
 
-All other dependencies are listed in `requirements.txt`.
