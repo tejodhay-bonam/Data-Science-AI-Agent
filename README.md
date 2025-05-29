@@ -65,7 +65,7 @@
 ### 1. Clone the repository
 
 ```bash
-git clone [https://github.com/your-username/ai-notebook-agent.git](https://github.com/kevalmahajan/ai-datascientist-agent)
+git clone https://github.com/tejodhay-bonam/Data-Science-AI-Agent
 cd ai-notebook-agent
 ````
 
@@ -102,11 +102,7 @@ streamlit run nb_agent_ui.py
 
 Make sure to replace `app.py` with the actual filename of your Streamlit entry point if different.
 
----
 
-## 🧪 Tested Notebooks
-
-Check the `tested_notebooks/` folder for example notebooks created entirely by the AI agent.
 
 ---
 
